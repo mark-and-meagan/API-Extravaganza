@@ -8,8 +8,34 @@
     <title>working title</title>
 </head>
 <body>
-    <form action="post">
+    <form action="">
         <!-- pick region, gender, age from dropdown and submit -->
+        <label for="alias">Generate Alias</label>
+        <select name="region" id="region">
+            <option value="Argentina">Argentina</option>
+            <option value="Australia">Australia</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Canada">Canada</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Egypt">Egypt</option>
+            <option value="England">England</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="India">India</option>
+            <option value="Korea">Korea</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Russia">Russia</option>
+        </select>
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <!-- <option value="random">Don't Care</option> -->
+        </select>
+        <input type="submit" value="Generate">
     </form>
 
     <div class="results">
@@ -18,8 +44,9 @@
         <p class="firstname"></p>
         <p class="surname"></p>
         <p class="birthday"></p>
-        <p class="sex"></p>
+        <p class="gender"></p>
         <p class="age"></p>
+        <p class="region"></p>
     </div>
 
     <div class="dossier">
