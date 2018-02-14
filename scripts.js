@@ -11,6 +11,7 @@ const spyApp = {};
 
 spyApp.aliasURL = 'https://uinames.com/api/?ext';
 spyApp.newsURL = 'https://newsapi.org/v2/top-headlines?apiKey=78fde68366ee4527b3657ee5cf00545a';
+spyApp.langURL = 'https://translate.yandex.net/api/v1.5/tr.json/translate? key=trnsl.1.1.20180214T213558Z.002f2216a1277a3c.b2d49048607a0c301a3ea3f8afa73907988dcc31'
 
 spyApp.getAlias = function(userRegion, userGender) {
     $.ajax({
@@ -36,6 +37,7 @@ spyApp.getNews = function() {
         data: {
             //add q: 'query' to take the userchoice from the region dropdown. Will give 
             //results appropriate to the area chosen
+            
             language: 'en',
             pageSize: 3,
         }
@@ -44,6 +46,8 @@ spyApp.getNews = function() {
         // console.log(res);
     });
 };
+
+
 
 spyApp.displayAlias = function(alias) {
   
