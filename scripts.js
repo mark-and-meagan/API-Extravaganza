@@ -46,14 +46,7 @@ spyApp.getNews = function() {
 };
 
 spyApp.displayAlias = function(alias) {
-    console.log('this is the alias', alias);
-    console.log(alias.age);
-
-// const newAlias = () => {
-
-// }
-
-// newAlias.forEach()
+  
     $(".firstname").text(alias.name);
     $(".surname").text(alias.surname);
     $(".gender").text(alias.gender);
@@ -61,13 +54,6 @@ spyApp.displayAlias = function(alias) {
     $(".age").text(alias.age);
     $(".birthday").text(alias.birthday.mdy);
     $(".region").text(alias.region);
-// };
-
-// spyApp.userInfo = function() {
-    // const userRegion = $("#region").val();
-    // console.log(userRegion);
-    // const userGender = $("#gender").val();
-    // console.log(userGender);
 }
 
 // spyApp.getAlias(userRegion);
@@ -80,22 +66,13 @@ spyApp.events = function() {
         const userRegion = $('#region option:selected').val();
         const userGender = $('#gender option:selected').val();
 
-        console.log(userRegion)
-        console.log(userGender)
         spyApp.getAlias(userRegion, userGender);
 
     });
 }
 
-// $('form').on('submit', function(e){
-//     e.preventDefault();
-//     spyApp.init();
-// });
-
 spyApp.init = function() {
-    // spyApp.getAlias();
     spyApp.getNews();
-    // spyApp.userInfo();
     spyApp.events();
     
     
@@ -105,9 +82,3 @@ $(document).ready(function(){
     spyApp.init();
     
 });
-
-//be able to use info the user has provided to filter through the options given back by the API. use userRegion and userGender as parameters
-
-// $("#region").on("change", function () {
-//     console.log("new region selected");
-// });
