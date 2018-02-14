@@ -8,11 +8,75 @@
 //The missions will be stored in arrays
 
 //object for our app
-const spyApp = {};
+const spyApp = {}
+
+const langCode = [
+    {
+        lang: "english",
+        country: [
+            "Canada",
+            "England",
+            "Australia"
+        ],
+        code: "en"
+    },
+    {
+        lang: "french",
+        country: [
+            "France",
+            "Belgium"
+        ],
+        code: "fr"
+    },
+    {
+        lang: "arabic",
+        country: "Egypt",
+        code: "ar"
+    },
+    {
+        lang: "german",
+        country: "Germany",
+        code: "de"
+    },
+    {
+        lang: "hindi",
+        country: "India",
+        code: "hi"
+    },
+    {
+        lang: "korean",
+        country: "Korea",
+        code: "ko"
+    },
+    {
+        lang: "russian",
+        country: "Russia",
+        code: "ru"
+    }
+]
+
+const missions = [
+    {
+        mission1: "collect intell on your mark"
+    },
+    {
+        mission2: "rendevouz with your insider person in predetermined drop point"
+    },
+    {
+        mission3: "conduct reconnaissance with a fellow agent"
+    },
+    {
+        mission4: "use your alias to infiltrate a black market infiltrating as a night club"
+    },
+    {
+        mission5: "collect intel on one of the stories from your dossier"
+    }
+]
 
 //storing the API urls
 spyApp.aliasURL = 'https://uinames.com/api/?ext';
 spyApp.newsURL = 'https://newsapi.org/v2/top-headlines?apiKey=78fde68366ee4527b3657ee5cf00545a';
+spyApp.langURL = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20180214T213558Z.002f2216a1277a3c.b2d49048607a0c301a3ea3f8afa73907988dcc31&text=hello goodbye thank you'
 
 //retrieves data from Name API and passing in what user
 //has chosen as the value for the key value pairs.
@@ -49,17 +113,27 @@ spyApp.getNews = function(userRegion) {
         }
     }).then((res) => {
         spyApp.displayDossier(res);
+    });
+};
+
+//need to make a variable that holds the 2 letter region code of userRegion to pass it through getLang lang parameter
+spyApp.getLang = function(lang) {
+    $.ajax({
+        url: spyApp.langURL,
+        method: 'POST',
+        dataType: 'jsonp',
+        data: {
+            lang: lang
+        }
+    }).then((res) => {
         console.log(res);
     });
 };
 
-spyApp.getLang = function(userRegion) {
-    $.ajax({
-        url: ,
-        method: 'GET',
-        dataType: 'json'
-    });
+spyApp.displayLang = function (lang) {
+    // $(".newLang").text(lang);
 }
+
 
 spyApp.displayDossier = function(headlines){
     $(".headline1").text(headlines.articles[0].title);
@@ -96,6 +170,59 @@ spyApp.events = function() {
         //getALias is called after user input
         spyApp.getAlias(userRegion, userGender);
         spyApp.getNews(userRegion);
+        spyApp.getLang(userRegion);
+
+        let lang;
+        //loop over the language array
+        langCode.forEach((item) => {
+
+            if(userRegion === 'Belgium') {
+                lang = 'fr'
+            }
+            if(userRegion === 'France'){
+                lang = 'fr'
+            }
+            if (userRegion === 'Canada') {
+                lang = 'en'
+            }
+            if (userRegion === 'England') {
+                lang = 'en'
+            }
+            if (userRegion === 'Australia') {
+                lang = 'en'
+            }
+            if (userRegion === 'Egypt') {
+                lang = 'ar'
+            }
+            if (userRegion === 'Germany') {
+                lang = 'de'
+            }
+            if (userRegion === 'India') {
+                lang = 'hi'
+            }
+            if (userRegion === 'Korea') {
+                lang = 'ko'
+            }
+            if (userRegion === 'Russia') {
+                lang = 'ru'
+            }
+            // console.log(lang);
+            // spyApp.displayLang(lang);
+
+        });
+
+        spyApp.getLang(lang);
+
+        // console.log(lang);
+
+        // console.log(newStuff);
+        //check to see if the userRegion matches any item in the array
+
+        //and if it does, then feed it into getLang function / request
+
+        spyApp.getLang(userRegion);
+
+
 
     });
 }
@@ -106,6 +233,7 @@ spyApp.events = function() {
 spyApp.init = function() {
     // spyApp.getNews();
     spyApp.events();
+    // spyApp.getLang();
 
 };
 
@@ -114,3 +242,6 @@ $(document).ready(function(){
     spyApp.init();
     
 });
+
+
+
