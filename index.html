@@ -9,83 +9,96 @@
     <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
 </head>
 <body>
-    <form action="">
-        <!-- pick region, gender, age from dropdown and submit -->
-        <label for="alias">Generate Alias</label>
-        <select name="region" id="region">
-            <div class="icon">
-                <img src="assets/dial.png" alt="">
-            </div>
-            <option value="Australia">Australia</option>
-            <option value="Belgium">Belgium</option>
-            <option value="Canada">Canada</option>
-            <option value="Egypt">Egypt</option>
-            <option value="England">England</option>
-            <option value="Germany">Germany</option>
-            <option value="France">France</option>
-            <option value="India">India</option>
-            <option value="Korea">Korea</option>
-            <option value="Russia">Russia</option>
-        </select>
-        <select name="gender" id="gender">
-            <div class="icon">
-                <img src="assets/dial.png" alt="">
-            </div>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <!-- <option value="random">Don't Care</option> -->
-        </select>
-        <input type="submit" value="Generate">
-    </form>
+    <section class="codeWord">
+        <!-- <form action="" class="codeform"> -->
+            <label for="codeword">ENTER CODE WORD</label>
+            <input type="password" class="codeword" name="codeword">
+            <button id="enter">enter</button>
+            <!-- <input type="submit" class="hidden" id="enter" value="enter"> -->
+        <!-- </form> -->
+    </section>
 
-    <div class="results">
-        <!-- pic, name, age, region phone number -->
-        <img src="placeholder.png" alt="" class="photoID">
-        <p class="firstname"></p>
-        <p class="surname"></p>
-        <p class="birthday"></p>
-        <p class="gender"></p>
-        <p class="age"></p>
-        <p class="region"></p>
-    </div>
-
-    <div class="dossier">
-        <!-- current news events/info -->
-        <a href="#" class="link1">
-            <p class="headline1"></p>
-        </a>
-        <a href="#" class="link2">
-             <p class="headline2"></p>
-        </a>
-         <a href="#" class="link3">
-            <p class="headline3"></p>
-        </a>
-         <a href="#" class="link4">
-            <p class="headline4"></p>
-        </a>
-         <a href="#" class="link5">
-            <p class="headline5"></p>
-        </a>
-
-        <p class="newLang">
-        </p>
+    <seciton class="alias hidden">
+        <form action="" class="alias-form">
+            <!-- pick region, gender, age from dropdown and submit -->
+            <label for="alias">Generate Alias</label>
+            <select name="region" id="region">
+                <div class="icon">
+                    <img src="assets/dial.png" alt="">
+                </div>
+                <option value="Australia">Australia</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Canada">Canada</option>
+                <option value="Egypt">Egypt</option>
+                <option value="England">England</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="India">India</option>
+                <option value="Korea">Korea</option>
+                <option value="Russia">Russia</option>
+            </select>
+            <select name="gender" id="gender">
+                <div class="icon">
+                    <img src="assets/dial.png" alt="">
+                </div>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <!-- <option value="random">Don't Care</option> -->
+            </select>
+            <input type="submit" id="generateAlias" value="Generate">
+        </form>
+        
+        <div class="results">
+            <!-- pic, name, age, region phone number -->
+            <img src="placeholder.png" alt="" class="photoID">
+            <p class="firstname"></p>
+            <p class="surname"></p>
+            <p class="birthday"></p>
+            <p class="gender"></p>
+            <p class="age"></p>
+            <p class="region"></p>
+        </div>
+    </seciton>
     
-    <section class="missions">
-        <button class="getMission" id="getMission" value="getMission"> Get Mission
-        </button>
-        <div class="randomMission">
-
+    <section class="dossier">
+        <div class="dossier-container">
+            <!-- current news events/info -->
+            <a href="#" class="link1">
+                <p class="headline1"></p>
+            </a>
+            <a href="#" class="link2">
+                <p class="headline2"></p>
+            </a>
+            <a href="#" class="link3">
+                <p class="headline3"></p>
+            </a>
+            <a href="#" class="link4">
+                <p class="headline4"></p>
+            </a>
+            <a href="#" class="link5">
+                <p class="headline5"></p>
+            </a>
+        
+            <p class="newLang">
+            </p>
+        </div>
+    </section>
+    
+    
+    <section class="missions hidden">
+        <div class="missions-container">
+            <button class="getMission" id="getMission" value="getMission"> Get Mission
+            </button>
+            <div class="randomMission">
+            
+            </div>
+            <div class="mission">
+                <!-- and array we will create with short missions -->
+            </div>
         </div>
     </section>
 
-        <!-- <p>hello: <span class="newHello"></span></p>
-        <p>goodbye: <span class="newGoodbye"></span></p>
-        <p>thank you: <span class="newThankYou"></span></p> -->
-    </div>
 
-    <div class="mission">
-        <!-- and array we will create with short missions -->
-    </div>
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
     <script src="scripts/scripts.js"></script>

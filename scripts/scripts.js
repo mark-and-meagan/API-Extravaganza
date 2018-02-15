@@ -170,6 +170,14 @@ spyApp.displayMissions = function() {
 
 //function that handles event listeners
 spyApp.events = function() {
+
+    $('#enter').on('click', function(){
+        //this shows the alias section when
+        //user clicks the enter button
+        $('.alias').removeClass('hidden');
+        $('.missions').removeClass('hidden');
+    });
+
     $("form").on("submit", function(e){
         e.preventDefault();
         //this takes in value for user selected userRegion
@@ -246,8 +254,9 @@ spyApp.events = function() {
         const randomMission = missions[Math.floor(Math.random()* missions.length)]
         console.log(randomMission);
         $('.missions').append(`<h2>${randomMission.mission}</h2>`);
-        $('randomMission').empty().append(`<h2>${randomMission.mission}</h2>`);
+        // $('randomMission').empty().append(`<h2>${randomMission.mission}</h2>`);
     });
+
 }
 
 //initializes the getNews and events functions
@@ -255,8 +264,6 @@ spyApp.events = function() {
 //don't need to be called twice in here
 spyApp.init = function() {
     spyApp.events();
-
-
 };
 
 //calling spyApp.init on page load
