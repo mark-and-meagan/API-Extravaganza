@@ -57,19 +57,19 @@ const langCode = [
 
 const missions = [
     {
-        mission1: "collect intell on your mark"
+        mission: "collect intell on your mark"
     },
     {
-        mission2: "rendevouz with your insider person in predetermined drop point"
+        mission: "rendevouz with your insider person in predetermined drop point"
     },
     {
-        mission3: "conduct reconnaissance with a fellow agent"
+        mission: "conduct reconnaissance with a fellow agent"
     },
     {
-        mission4: "use your alias to infiltrate a black market infiltrating as a night club"
+        mission: "use your alias to infiltrate a black market infiltrating as a night club"
     },
     {
-        mission5: "collect intel on one of the stories from your dossier"
+        mission: "collect intel on one of the stories from your dossier"
     }
 ]
 
@@ -125,13 +125,18 @@ spyApp.getLang = function(lang) {
         data: {
             lang: lang
         }
-    }).then((res) => {
+    }).then((res) => { 
+        //this gets the results form the API
         console.log(res);
+        //this is calling displayLang 
+        //and passing the results as an argument. So the data can be
+        //accessed by the function further down
+        spyApp.displayLang(res); 
     });
 };
 
 spyApp.displayLang = function (lang) {
-    // $(".newLang").text(lang);
+    $(".newLang").text(lang.text);
 }
 
 
@@ -157,6 +162,10 @@ spyApp.displayAlias = function(alias) {
     $(".age").text(alias.age);
     $(".birthday").text(alias.birthday.mdy);
     $(".region").text(alias.region);
+}
+
+spyApp.displayMissions = function() {
+    $(".missions").text()
 }
 
 //function that handles event listeners
@@ -211,6 +220,7 @@ spyApp.events = function() {
         });
 
         spyApp.getLang(lang);
+        spyApp.displayLang(lang);
 
         // console.log(lang);
 
@@ -222,6 +232,21 @@ spyApp.events = function() {
 
 
 
+    });
+    //function to randomize mission results from missions array
+    //when user clicks on submit button
+    // function randomMission(missions) {
+    //     const index = Math.floor(Math.random() * spyApp.missions.length);
+    //     //new result variable created from randomized function
+    //     const newMission = missions[index];
+    //     console.log(newMission);
+    // }   
+    $('.getMission').on('click', function(e) {
+        e.preventDefault();
+        const randomMission = missions[Math.floor(Math.random()* missions.length)]
+        console.log(randomMission);
+        $('.missions').append(`<h2>${randomMission.mission}</h2>`);
+        $('randomMission').empty().append(`<h2>${randomMission.mission}</h2>`);
     });
 }
 
