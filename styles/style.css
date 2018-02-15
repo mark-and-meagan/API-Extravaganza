@@ -15,6 +15,25 @@ p, h2, label{
 form{
     border: 1px solid #ccc;
     background-color: #3a3e50b9;
+    border-radius:5px;
+}
+
+.codeWord {
+    margin-top:200px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    background-color: #3a3e50b9;
+    padding:10px 10px;
+}
+
+
+.codeWord input {
+    padding:20px;
+}
+
+
+.hidden {
+    display: none;
 }
 
 select{
