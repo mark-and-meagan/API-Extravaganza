@@ -170,7 +170,6 @@ spyApp.events = function() {
         //getALias is called after user input
         spyApp.getAlias(userRegion, userGender);
         spyApp.getNews(userRegion);
-        spyApp.getLang(userRegion);
 
         let lang;
         //loop over the language array
@@ -220,7 +219,6 @@ spyApp.events = function() {
 
         //and if it does, then feed it into getLang function / request
 
-        spyApp.getLang(userRegion);
 
 
 
@@ -231,9 +229,8 @@ spyApp.events = function() {
 //getAlias and displayALias are inside spyApp.events and
 //don't need to be called twice in here
 spyApp.init = function() {
-    // spyApp.getNews();
     spyApp.events();
-    // spyApp.getLang();
+
 
 };
 
