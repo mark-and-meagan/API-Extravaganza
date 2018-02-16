@@ -4,87 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>working title</title>
     <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
 </head>
 <body>
-    <section class="codeWord">
-            <input type="password" class="codeword" placeholder="ENTER CODE HERE" name="codeword">
-            <button id="enter">enter</button>
-    </section>
+    <div class="wrapper">
+        <section class="codeWord">
+                <input type="password" class="codeword" placeholder="ENTER CODE HERE" name="codeword">
+                <button id="enter">enter</button>
+        </section>
 
-    <seciton class="alias hidden">
-        <form action="" class="alias-form">
-            <!-- pick region, gender, age from dropdown and submit -->
-            <label for="alias">Generate Alias</label>
-            <select name="region" id="region">
-                <div class="icon">
-                    <img src="assets/dial.png" alt="">
-                </div>
-                <option value="Australia">Australia</option>
-                <option value="Belgium">Belgium</option>
-                <option value="Canada">Canada</option>
-                <option value="Egypt">Egypt</option>
-                <option value="England">England</option>
-                <option value="Germany">Germany</option>
-                <option value="France">France</option>
-                <option value="India">India</option>
-                <option value="Korea">Korea</option>
-                <option value="Russia">Russia</option>
-            </select>
-            <input type="submit" id="generateAlias" value="Generate">
-        </form>
-        
-        <div class="results">
-            <!-- pic, name, age, region phone number -->
-            <img src="placeholder.png" alt="" class="photoID">
-            <p class="firstname"></p>
-            <p class="surname"></p>
-            <p class="birthday"></p>
-            <p class="gender"></p>
-            <p class="age"></p>
-            <p class="region"></p>
-        </div>
-    </seciton>
-    
-    <section class="dossier">
-        <div class="dossier-container">
-            <!-- current news events/info -->
-            <a href="#" class="link1">
-                <p class="headline1"></p>
-            </a>
-            <a href="#" class="link2">
-                <p class="headline2"></p>
-            </a>
-            <a href="#" class="link3">
-                <p class="headline3"></p>
-            </a>
-            <a href="#" class="link4">
-                <p class="headline4"></p>
-            </a>
-            <a href="#" class="link5">
-                <p class="headline5"></p>
-            </a>
-        
-            <p class="newLang">
-            </p>
-        </div>
-    </section>
-    
-    
-    <section class="missions hidden">
-        <div class="missions-container">
-            <button class="getMission" id="getMission" value="getMission"> Get Mission
-            </button>
-            <div class="randomMission">
+        <seciton class="alias hidden">
+            <form action="" class="alias-form">
+                <!-- pick region, gender, age from dropdown and submit -->
+                <label for="alias">Generate Alias</label>
+                <select name="region" id="region">
+                    <div class="icon">
+                        <img src="assets/dial.png" alt="">
+                    </div>
+                    <option value="Australia">Australia</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="England">England</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="India">India</option>
+                    <option value="Korea">Korea</option>
+                    <option value="Russia">Russia</option>
+                </select>
+                <input type="submit" id="generateAlias" value="Generate">
+            </form>
             
+            <div class="results">
+                <!-- pic, name, age, region phone number -->
+                <div class="profile">
+                    <img src="placeholder.png" alt="" class="photoID">
+                </div>
+                <p class="firstname"></p>
+                <p class="surname"></p>
+                <p class="birthday"></p>
+                <p class="gender"></p>
+                <p class="age"></p>
+                <p class="region"></p>
             </div>
-            <div class="mission">
-                <!-- and array we will create with short missions -->
+        </seciton>
+        
+        <section class="dossier">
+            <div class="dossier-container">
+                <!-- current news events/info -->
+                <a href="#" class="link1">
+                    <p class="headline1"></p>
+                </a>
+                <a href="#" class="link2">
+                    <p class="headline2"></p>
+                </a>
+                <a href="#" class="link3">
+                    <p class="headline3"></p>
+                </a>
+                <a href="#" class="link4">
+                    <p class="headline4"></p>
+                </a>
+                <a href="#" class="link5">
+                    <p class="headline5"></p>
+                </a>
+            
+                <p class="newLang">
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        
+        <section class="missions hidden">
+            <div class="missions-container">
+                <button class="getMission" id="getMission" value="getMission"> Get Mission
+                </button>
+                <div class="randomMission">
+                
+                </div>
+                <div class="mission">
+                    <!-- and array we will create with short missions -->
+                </div>
+            </div>
+        </section>
+    </div>
 
 
 

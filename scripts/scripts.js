@@ -155,7 +155,8 @@ spyApp.displayDossier = function(headlines){
 
 //function that displays all necessary info to the DOM
 spyApp.displayAlias = function(alias) {
-  
+    
+    $(".photoID").append(`<img src="assets/profile.png" alt"">`);
     $(".firstname").text(alias.name);
     $(".surname").text(alias.surname);
     // $(".gender").text(alias.gender);
