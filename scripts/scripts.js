@@ -87,7 +87,7 @@ spyApp.getAlias = function(userRegion, userGender) {
         dataType: 'json',
         data: {
             region: userRegion,
-            gender: userGender,
+            // gender: userGender,
         }
     //the results we are getting from API
     //and calling displayAlias and passing it down
@@ -158,7 +158,7 @@ spyApp.displayAlias = function(alias) {
   
     $(".firstname").text(alias.name);
     $(".surname").text(alias.surname);
-    $(".gender").text(alias.gender);
+    // $(".gender").text(alias.gender);
     $(".age").text(alias.age);
     $(".birthday").text(alias.birthday.mdy);
     $(".region").text(alias.region);
@@ -176,6 +176,7 @@ spyApp.events = function() {
         //user clicks the enter button
         $('.alias').removeClass('hidden');
         $('.missions').removeClass('hidden');
+        $('.codeWord').addClass('hidden');
     });
 
     $("form").on("submit", function(e){
@@ -183,9 +184,9 @@ spyApp.events = function() {
         //this takes in value for user selected userRegion
         //and userGender
         const userRegion = $('#region option:selected').val();
-        const userGender = $('#gender option:selected').val();
+        // const userGender = $('#gender option:selected').val();
         //getALias is called after user input
-        spyApp.getAlias(userRegion, userGender);
+        spyApp.getAlias(userRegion);
         spyApp.getNews(userRegion);
 
         let lang;
