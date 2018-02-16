@@ -1,0 +1,46 @@
+@import "components/_normalize.scss";
+@import "components/_codeWord.scss";
+@import "components/_alias.scss";
+@import "components/_results.scss";
+@import "components/_dossier.scss";
+@import "components/_mission.scss";
+
+body {
+    background: #0b0c10;
+    font-family: 'Cairo', sans-serif;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+p, h2, label{
+    color: rgba(245, 245, 245, 0.562);
+    
+}
+
+.hidden {
+    display: none;
+}
+
+button, input{
+    height: 75px;
+    background-color: transparent;
+    color: #94f7ff;
+    border-style: none;
+    /* border: 1px solid #ccc; */
+}
+
+@keyframes pulse {
+    0% {
+        background-color:#3a3e50;
+    }
+    50% {
+        background-color:#4f5570;
+    }
+    100% {
+        background-color:#3a3e50;
+    }
+}

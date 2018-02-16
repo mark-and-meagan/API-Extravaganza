@@ -1,0 +1,53 @@
+.alias-form{
+    border: 1px solid #ccc;
+    background-color: #3a3e50;
+    border-radius:30px;
+    animation: pulse 2s infinite;
+    padding:0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    align-items: center;
+}
+
+label {
+    text-transform: uppercase;
+    color:#94f7ff;
+}
+
+select{
+    border-style: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 120px;
+    height: 75px;
+    background-color: transparent;
+    border-radius:30px;
+    color: #94f7ff;
+    background-image: url(../assets/dial.png);
+    background-position: 90% 50%;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    padding: 20px;
+    option {
+        color:#3a3e50;
+    }
+}
+
+[input="submit"] {
+    background-color: transparent;
+}
+
+select:active{
+    background-image: url(../assets/dial_down.png);
+}
+
+.icon{
+    height: 10px;
+    width: 10px;
+}
+
+.icon img{
+    width: 100%;
+}

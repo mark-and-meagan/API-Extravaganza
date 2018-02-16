@@ -76,7 +76,7 @@ const missions = [
 //storing the API urls
 spyApp.aliasURL = 'https://uinames.com/api/?ext';
 spyApp.newsURL = 'https://newsapi.org/v2/top-headlines?apiKey=78fde68366ee4527b3657ee5cf00545a';
-spyApp.langURL = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20180214T213558Z.002f2216a1277a3c.b2d49048607a0c301a3ea3f8afa73907988dcc31&text=The agency says hello. Our mission is to neutralize the mark. We begin at midnight.'
+spyApp.langURL = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20180214T213558Z.002f2216a1277a3c.b2d49048607a0c301a3ea3f8afa73907988dcc31&text=The Agency says hello. Our mission is to neutralize the mark. We begin at midnight.'
 
 //retrieves data from Name API and passing in what user
 //has chosen as the value for the key value pairs.
@@ -155,7 +155,8 @@ spyApp.displayDossier = function(headlines){
 
 //function that displays all necessary info to the DOM
 spyApp.displayAlias = function(alias) {
-  
+    
+    $(".photoID").append(`<img src="assets/profile.png" alt"">`);
     $(".firstname").text(alias.name);
     $(".surname").text(alias.surname);
     // $(".gender").text(alias.gender);
@@ -176,9 +177,13 @@ spyApp.events = function() {
         //user clicks the enter button
         $('.alias').removeClass('hidden');
         $('.missions').removeClass('hidden');
-        $('.codeWord').addClass('hidden');
-        $('.getMission').removeClass('hidden');
+        $('.codeWord').addClass('scale-out-horizontal');
+        setTimeout(function() {
+            $('.codeWord').addClass('hidden');
+        }, 700);
+        
     });
+        
 
     $("form").on("submit", function(e){
         e.preventDefault();
@@ -189,6 +194,8 @@ spyApp.events = function() {
         //getALias is called after user input
         spyApp.getAlias(userRegion);
         spyApp.getNews(userRegion);
+        $('.getMission').removeClass('hidden');
+        $('.dossier').removeClass('hidden');
 
         let lang;
         //loop over the language array
