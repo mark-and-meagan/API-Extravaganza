@@ -196,6 +196,7 @@ spyApp.events = function() {
         spyApp.getNews(userRegion);
         $('.getMission').removeClass('hidden');
         $('.dossier').removeClass('hidden');
+        $('.dossier-container').removeClass('hidden');
 
         let lang;
         //loop over the language array
