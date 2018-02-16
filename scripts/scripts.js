@@ -60,13 +60,13 @@ const missions = [
         mission: "collect intell on your mark"
     },
     {
-        mission: "rendevouz with your insider person in predetermined drop point"
+        mission: "rendevouz with your insider in predetermined drop point"
     },
     {
         mission: "conduct reconnaissance with a fellow agent"
     },
     {
-        mission: "use your alias to infiltrate a black market infiltrating as a night club"
+        mission: "use your alias to infiltrate a black market fronting as a night club"
     },
     {
         mission: "collect intel on one of the stories from your dossier"
@@ -76,7 +76,7 @@ const missions = [
 //storing the API urls
 spyApp.aliasURL = 'https://uinames.com/api/?ext';
 spyApp.newsURL = 'https://newsapi.org/v2/top-headlines?apiKey=78fde68366ee4527b3657ee5cf00545a';
-spyApp.langURL = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20180214T213558Z.002f2216a1277a3c.b2d49048607a0c301a3ea3f8afa73907988dcc31&text=hello goodbye thank you'
+spyApp.langURL = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20180214T213558Z.002f2216a1277a3c.b2d49048607a0c301a3ea3f8afa73907988dcc31&text=The agency says hello. Our mission is to neutralize the mark. We begin at midnight.'
 
 //retrieves data from Name API and passing in what user
 //has chosen as the value for the key value pairs.
@@ -178,6 +178,7 @@ spyApp.events = function() {
         $('.alias').removeClass('hidden');
         $('.missions').removeClass('hidden');
         $('.codeWord').addClass('hidden');
+        $('.getMission').removeClass('hidden');
     });
 
     $("form").on("submit", function(e){
