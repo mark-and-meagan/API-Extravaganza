@@ -1,0 +1,36 @@
+form{
+    border: 1px solid #ccc;
+    background-color: #3a3e50;
+    border-radius:5px;
+}
+
+select{
+    border-style: none;
+    /* border: 1px solid #ccc; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 120px;
+    height: 75px;
+    background-color: #3a3e50;
+    border-radius: 3px;
+    color: rgba(245, 245, 245, 0.562);
+    background-image: url(assets/dial.png);
+    background-position: 90% 50%;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+select:active{
+    background-image: url(assets/dial_down.png);
+}
+
+.icon{
+    height: 10px;
+    width: 10px;
+}
+
+.icon img{
+    width: 100%;
+}
