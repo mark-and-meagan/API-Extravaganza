@@ -11,8 +11,10 @@
 <body>
     <div class="wrapper">
         <section class="codeWord">
+            <div class="codeWord-container">
                 <input type="password" class="codeword" placeholder="ENTER CODE HERE" name="codeword">
-                <button id="enter">enter</button>
+                <button id="enter">ENTER</button>
+            </div>
         </section>
 
         <seciton class="alias hidden">
@@ -34,7 +36,7 @@
                     <option value="Korea">Korea</option>
                     <option value="Russia">Russia</option>
                 </select>
-                <input type="submit" id="generateAlias" value="Generate">
+                <input type="submit" id="generateAlias" value="GENERATE">
             </form>
             
             <div class="results">
@@ -51,10 +53,35 @@
             </div>
         </seciton>
         
+        <section class="dossier hidden">
+            <div class="dossier-container wrapper">
+                <div class="intel">
+                    <h3>INTEL</h3>
+                    <a href="#" class="link1">
+                        <p class="headline1"></p>
+                    </a>
+                    <a href="#" class="link2">
+                        <p class="headline2"></p>
+                    </a>
+                    <a href="#" class="link3">
+                        <p class="headline3"></p>
+                    </a>
+                    <a href="#" class="link4">
+                        <p class="headline4"></p>
+                    </a>
+                    <a href="#" class="link5">
+                        <p class="headline5"></p>
+                    </a>
+                </div>
 
-            <p class="newLang">
-            </p>
-        </div>
+                <div class="language">
+                    <h3>LOCAL LANGUAGE</h3>
+                    <div class="lang-words">
+                        <p>The Agency says hello. Our mission is to neutralize the mark. We begin at midnight</p>
+                        <p class="newLang"></p>
+                    </div>
+                </div>
+            </div>
     </section>
     
     
@@ -63,48 +90,6 @@
             <button class="getMission hidden" id="getMission" value="getMission"> Get Mission
             </button>
             <div class="randomMission">
-              
-        <section class="dossier">
-            <div class="dossier-container">
-                <!-- current news events/info -->
-                <a href="#" class="link1">
-                    <p class="headline1"></p>
-                </a>
-                <a href="#" class="link2">
-                    <p class="headline2"></p>
-                </a>
-                <a href="#" class="link3">
-                    <p class="headline3"></p>
-                </a>
-                <a href="#" class="link4">
-                    <p class="headline4"></p>
-                </a>
-                <a href="#" class="link5">
-                    <p class="headline5"></p>
-                </a>
-
-            
-                <p class="newLang">
-                </p>
-            </div>
-        </section>
-        
-        
-        <section class="missions hidden">
-            <div class="missions-container">
-                <button class="getMission" id="getMission" value="getMission"> Get Mission
-                </button>
-                <div class="randomMission">
-                
-                </div>
-                <div class="mission">
-                    <!-- and array we will create with short missions -->
-                </div>
-            </div>
-        </section>
-    </div>
-
-
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
     <script src="scripts/scripts.js"></script>

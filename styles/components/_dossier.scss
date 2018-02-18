@@ -1,0 +1,28 @@
+h3 {
+    color:#0b0c10;
+}
+
+a {
+    text-decoration-color: #94f7ff;
+}
+
+.intel {
+    width:50%;
+}
+.dossier-container {
+    border: 1px solid #ccc;
+    background-color: #3a3e50;
+    border-radius:30px;
+    padding:10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    .language {
+        width:40%;
+        text-align: right;
+        .newLang {
+            color:#94f7ff;
+        }
+    }
+}

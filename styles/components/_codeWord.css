@@ -1,0 +1,12 @@
+.codeWord {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #94f7ff;
+  padding: 0 10px; }
+
+.codeWord input {
+  padding: 20px;
+  width: 80%; }
+
+.codeWord button {
+  width: 19%; }
