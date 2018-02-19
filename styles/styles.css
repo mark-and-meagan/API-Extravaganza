@@ -139,12 +139,20 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   height: 75px;
   position: relative;
   z-index: 10;
-  top: 40%;
+  top: 15%;
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
   border: 1px solid #ccc;
   border-radius: 30px;
   padding: 0 10px; }
+
+.crest {
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 100px; }
+
+.crest img {
+  width: 100%; }
 
 .codeWord input {
   padding: 20px;
@@ -315,6 +323,9 @@ a {
 .intel {
   width: 50%; }
 
+.intel a {
+  text-decoration: none; }
+
 .dossier-container {
   border: 1px solid #ccc;
   background-color: #3a3e50;
@@ -337,6 +348,14 @@ a {
     text-align: right; }
     .dossier-container .language .newLang {
       color: #94f7ff; }
+
+.article-photo {
+  width: 90%; }
+
+.photoH1, .photoH2, .photoH3, .photoH4, .photoH5 {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
 .missions {
   height: 50vh; }

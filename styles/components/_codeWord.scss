@@ -6,11 +6,21 @@
     height: 75px;
     position: relative;
     z-index: 10;
-    top:40%;
+    top:15%;
     animation: pulse 2s infinite;
     border:1px solid #ccc;
     border-radius:30px;
     padding:0 10px;
+}
+
+.crest{
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.crest img{
+  width: 100%;
 }
 
 .codeWord input {

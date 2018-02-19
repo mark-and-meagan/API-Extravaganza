@@ -60,6 +60,15 @@ const missions = [
         mission: "collect intell on your mark"
     },
     {
+        mission: "retrieve special food item from your new identity's country of origin"
+    },
+    {
+        mission: "Meet at your local museum and gather intel on cultural practices conducted by your new identity's country of origin"
+    },
+    {
+        mission: "rendezvous at the cinema and dazzle and seduce your date with your new persona."
+    },
+    {
         mission: "rendevouz with your insider in predetermined drop point"
     },
     {
@@ -143,14 +152,19 @@ spyApp.displayLang = function (lang) {
 spyApp.displayDossier = function(headlines){
     $(".headline1").text(headlines.articles[0].title);
     $(".link1").attr('href', headlines.articles[0].url);
+    $(".photoH1").attr('src',headlines.articles[0].urlToImage);
     $(".headline2").text(headlines.articles[1].title);
     $(".link2").attr('href', headlines.articles[1].url);
+    $(".photoH2").attr('src', headlines.articles[1].urlToImage);
     $(".headline3").text(headlines.articles[2].title);
     $(".link3").attr('href', headlines.articles[2].url);
+    $(".photoH3").attr('src', headlines.articles[2].urlToImage);
     $(".headline4").text(headlines.articles[3].title);
     $(".link4").attr('href', headlines.articles[3].url);
+    $(".photoH4").attr('src', headlines.articles[3].urlToImage);
     $(".headline5").text(headlines.articles[4].title);
     $(".link5").attr('href', headlines.articles[4].url); 
+    $(".photoH15").attr('src', headlines.articles[4].urlToImage);
 };
 
 //function that displays all necessary info to the DOM

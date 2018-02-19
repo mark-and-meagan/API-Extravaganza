@@ -9,6 +9,11 @@ a {
 .intel {
     width:50%;
 }
+
+.intel a{
+    text-decoration: none;
+}
+
 .dossier-container {
     border: 1px solid #ccc;
     background-color: #3a3e50;
@@ -25,4 +30,13 @@ a {
             color:#94f7ff;
         }
     }
+}
+
+.article-photo{
+    width: 90%;
+}
+.photoH1, .photoH2, .photoH3, .photoH4, .photoH5 {
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
