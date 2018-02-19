@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>working title</title>
     <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
@@ -17,7 +18,7 @@
             </div>
         </section>
 
-        <seciton class="alias hidden">
+        <section class="alias hidden">
             <form action="" class="alias-form">
                 <!-- pick region, gender, age from dropdown and submit -->
                 <label for="alias">Generate Alias</label>
@@ -38,20 +39,24 @@
                 </select>
                 <input type="submit" id="generateAlias" value="GENERATE">
             </form>
-            
-            <div class="results">
-                <!-- pic, name, age, region phone number -->
+        </section>
+        
+        <section class="id-results hidden">
+            <div class="results-container">
                 <div class="profile">
                     <img src="placeholder.png" alt="" class="photoID">
                 </div>
-                <p class="firstname"></p>
-                <p class="surname"></p>
-                <p class="birthday"></p>
-                <p class="gender"></p>
-                <p class="age"></p>
-                <p class="region"></p>
+                <div class="results">
+                    <!-- pic, name, age, region phone number -->
+                    <h1 class="firstname"></h1>
+                    <h1 class="surname"></h1>
+                    <h1 class="birthday"></h1>
+                    <h1 class="gender"></h1>
+                    <h1 class="age"></h1>
+                    <h1 class="region"></h1>
+                </div>
             </div>
-        </seciton>
+        </section>
         
         <section class="dossier hidden">
             <div class="dossier-container wrapper">
@@ -82,15 +87,23 @@
                     </div>
                 </div>
             </div>
-    </section>
-    
-    
-    <section class="missions hidden">
-        <div class="missions-container">
-            <button class="getMission hidden" id="getMission" value="getMission"> Get Mission
-            </button>
-            <div class="randomMission">
-
+        </section>
+        <section class="missions hidden">
+            <div class="missions-container">
+                <button class="getMission hidden" id="getMission" value="getMission">
+                    <p>Get Mission</p>
+                </button>
+                <div class="randomMission" id="randomMission">
+                    <h1>
+                        <span class="type-it">
+                            <div class="target">
+                            </div>
+                        </span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+    </div>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
     <script src="scripts/scripts.js"></script>
 </body>
