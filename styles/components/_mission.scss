@@ -1,0 +1,64 @@
+.missions{
+    height: 50vh;
+}
+
+.missions-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.getMission{
+    border: 1px solid white;
+    padding: 30px;
+    border-radius: 15px;
+    height: 100px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 75px;
+    transition: 0.3s;
+}
+
+.getMission:hover{
+    background: #d2e9eb;
+}
+
+.getMission p{
+    margin: 0 auto;   
+}
+
+.target{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.target img{
+    width: 100%;
+}
+
+.randomMission{
+    padding-top: 100px;
+    padding-bottom: 200px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .target{
+        width: 50px;
+        height: 100%;
+    }
+
+    .randomMission{
+        width: 80%;
+    }
+
+    .randomMission h1{
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+}

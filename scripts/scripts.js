@@ -156,7 +156,7 @@ spyApp.displayDossier = function(headlines){
 //function that displays all necessary info to the DOM
 spyApp.displayAlias = function(alias) {
     
-    $(".photoID").append(`<img src="assets/profile.png" alt"">`);
+    $(".photoID").append(`<img src="assets/head.gif" alt"">`);
     $(".firstname").text(alias.name);
     $(".surname").text(alias.surname);
     // $(".gender").text(alias.gender);
@@ -194,6 +194,7 @@ spyApp.events = function() {
         //getALias is called after user input
         spyApp.getAlias(userRegion);
         spyApp.getNews(userRegion);
+        $('.id-results').removeClass('hidden');
         $('.getMission').removeClass('hidden');
         $('.dossier').removeClass('hidden');
         $('.dossier-container').removeClass('hidden');
@@ -263,10 +264,10 @@ spyApp.events = function() {
         e.preventDefault();
         const randomMission = missions[Math.floor(Math.random()* missions.length)]
         console.log(randomMission);
-        $('.missions').append(`<h2>${randomMission.mission}</h2>`);
+        $(".target").append(`<img src="assets/target.png" alt"">`)
+        $('.randomMission').append(`<h1>${randomMission.mission}</h1>`);
         // $('randomMission').empty().append(`<h2>${randomMission.mission}</h2>`);
     });
-
 }
 
 //initializes the getNews and events functions
