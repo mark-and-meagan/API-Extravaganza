@@ -96,7 +96,6 @@ spyApp.getAlias = function(userRegion, userGender) {
         dataType: 'json',
         data: {
             region: userRegion,
-            // gender: userGender,
         }
     //the results we are getting from API
     //and calling displayAlias and passing it down
@@ -114,7 +113,7 @@ spyApp.getNews = function(userRegion) {
         method: 'GET',
         dataType: 'json',
         data: {
-            //add q: 'query' to take the userchoice from the region dropdown. Will give 
+            // Will give 
             //results appropriate to the area chosen
             q: userRegion,
             language: 'en',
@@ -136,7 +135,6 @@ spyApp.getLang = function(lang) {
         }
     }).then((res) => { 
         //this gets the results form the API
-        console.log(res);
         //this is calling displayLang 
         //and passing the results as an argument. So the data can be
         //accessed by the function further down
@@ -170,10 +168,8 @@ spyApp.displayDossier = function(headlines){
 //function that displays all necessary info to the DOM
 spyApp.displayAlias = function(alias) {
     
-    $(".photoID").append(`<img src="assets/head.gif" alt"">`);
     $(".firstname").text(alias.name);
     $(".surname").text(alias.surname);
-    // $(".gender").text(alias.gender);
     $(".age").text(alias.age);
     $(".birthday").text(alias.birthday.mdy);
     $(".region").text(alias.region);
@@ -202,9 +198,7 @@ spyApp.events = function() {
     $("form").on("submit", function(e){
         e.preventDefault();
         //this takes in value for user selected userRegion
-        //and userGender
         const userRegion = $('#region option:selected').val();
-        // const userGender = $('#gender option:selected').val();
         //getALias is called after user input
         spyApp.getAlias(userRegion);
         spyApp.getNews(userRegion);
@@ -247,40 +241,17 @@ spyApp.events = function() {
             if (userRegion === 'Russia') {
                 lang = 'ru'
             }
-            // console.log(lang);
-            // spyApp.displayLang(lang);
-
         });
-
         spyApp.getLang(lang);
         spyApp.displayLang(lang);
-
-        // console.log(lang);
-
-        // console.log(newStuff);
-        //check to see if the userRegion matches any item in the array
-
-        //and if it does, then feed it into getLang function / request
-
-
-
-
     });
     //function to randomize mission results from missions array
     //when user clicks on submit button
-    // function randomMission(missions) {
-    //     const index = Math.floor(Math.random() * spyApp.missions.length);
-    //     //new result variable created from randomized function
-    //     const newMission = missions[index];
-    //     console.log(newMission);
-    // }   
     $('.getMission').on('click', function(e) {
         e.preventDefault();
         const randomMission = missions[Math.floor(Math.random()* missions.length)]
-        console.log(randomMission);
         $(".target").append(`<img src="assets/target.png" alt"">`)
         $('.randomMission').append(`<h1>${randomMission.mission}</h1>`);
-        // $('randomMission').empty().append(`<h2>${randomMission.mission}</h2>`);
     });
 }
 
@@ -294,7 +265,6 @@ spyApp.init = function() {
 //calling spyApp.init on page load
 $(document).ready(function(){
     spyApp.init();
-    
 });
 
 
