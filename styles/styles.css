@@ -134,6 +134,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .codeWord {
   height: 100vh; }
+  .codeWord h2 {
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    margin: 0;
+    font-weight: 400; }
   .codeWord h1 {
     text-transform: initial;
     text-align: center;
@@ -221,6 +226,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+
+h2 {
+  font-weight: 400;
+  text-align: center; }
 
 label {
   text-transform: uppercase;
@@ -315,7 +324,7 @@ select:active {
     margin-bottom: 40px; } }
 
 h3 {
-  color: #0b0c10; }
+  color: #ccc; }
 
 a {
   -webkit-text-decoration-color: #94f7ff;
