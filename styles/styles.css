@@ -476,3 +476,14 @@ button, input {
     background-color: #4f5570; }
   100% {
     background-color: #3a3e50; } }
+
+footer {
+  color: rgba(245, 245, 245, 0.562);
+  margin: 0 auto;
+  text-align: center;
+  bottom: 0; }
+
+footer a {
+  color: rgba(245, 245, 245, 0.562);
+  text-align: center;
+  text-decoration: none; }
