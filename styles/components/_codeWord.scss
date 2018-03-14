@@ -1,6 +1,15 @@
 .codeWord {
     height:100vh;
+    h1 {
+      text-transform: initial;
+      text-align: center;
+      font-family: 'Cairo', sans-serif;
+      .big {
+        font-size: 3rem;
+      }
+    }
 }
+
 
 .codeWord-container {
     height: 75px;

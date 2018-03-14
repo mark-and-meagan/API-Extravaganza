@@ -134,6 +134,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .codeWord {
   height: 100vh; }
+  .codeWord h1 {
+    text-transform: initial;
+    text-align: center;
+    font-family: 'Cairo', sans-serif; }
+    .codeWord h1 .big {
+      font-size: 3rem; }
 
 .codeWord-container {
   height: 75px;
@@ -258,6 +264,8 @@ select:active {
   padding-top: 40px;
   width: 70%;
   margin: 0 auto; }
+  .profile img {
+    max-width: 100%; }
 
 .results-container {
   display: -webkit-box;
@@ -280,13 +288,6 @@ select:active {
   -o-transform: skew(10deg);
   height: 400px; }
 
-.profile {
-  width: 60%;
-  margin: 0 auto; }
-
-.results-container img {
-  width: 100%; }
-
 @media (max-width: 768px) {
   .profile {
     width: 100%; }
@@ -308,7 +309,7 @@ select:active {
   .results h1 {
     font-size: 24px; } }
 
-@media (max-width: 480px) {
+@media (max-width: 440px) {
   .id-results {
     height: 100vh;
     margin-bottom: 40px; } }
@@ -320,8 +321,15 @@ a {
   -webkit-text-decoration-color: #94f7ff;
   text-decoration-color: #94f7ff; }
 
+.dossier-crest {
+  max-width: 15%;
+  margin-top: 20px; }
+  .dossier-crest img {
+    max-width: 100%; }
+
 .intel {
-  width: 50%; }
+  width: 40%;
+  margin-top: 200px; }
 
 .intel a {
   text-decoration: none; }
@@ -345,7 +353,8 @@ a {
   align-items: flex-start; }
   .dossier-container .language {
     width: 40%;
-    text-align: right; }
+    text-align: right;
+    margin-top: 200px; }
     .dossier-container .language .newLang {
       color: #94f7ff; }
 
@@ -387,7 +396,8 @@ a {
   background: #d2e9eb; }
 
 .getMission p {
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-transform: uppercase; }
 
 .target {
   width: 100px;

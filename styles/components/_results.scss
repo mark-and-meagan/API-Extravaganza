@@ -6,6 +6,9 @@
     padding-top: 40px;
     width: 70%;
     margin:  0 auto;
+    img {
+        max-width: 100%;
+    }
 }
 
 .results-container{
@@ -26,15 +29,6 @@
     -o-transform: skew(10deg);
     height: 400px;
     
-}
-
-.profile{
-    width: 60%;
-    margin: 0 auto;
-}
-
-.results-container img{
-    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -66,7 +60,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 440px) {
     .id-results{
         height: 100vh;
         margin-bottom: 40px;
